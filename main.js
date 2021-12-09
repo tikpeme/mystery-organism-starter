@@ -32,10 +32,29 @@ const pAequorFactory = (uniqueNum, dnastrand) =>{
 
       if(CorGDNACount >= 9) return true //check is 60% or more  "C" or "G" DNA base count
       else return false
-    }
+    },
 
+    complementStrand(){
+      let complementDNAStrand =[];
+
+      return this.dna.map(DNAbase => {
+        switch(DNAbase){
+          case 'A':
+            return 'T'
+          case 'T':
+            return 'A'
+          case 'C':
+            return 'G'
+          case 'G':
+            return 'C'
+          default:
+            console.log(`The DNA base is abnormal`)
+          }
+        }
+        )
+      }
+    }
   }
-}
 
 let pAequorStudyArr = []
 let specimenNumId = 0
@@ -49,6 +68,7 @@ while( pAequorStudyArr.length < 30){
 
 }
 
+
 /* Tests
 console.log(pAequorFactory(1,mockUpStrand()))// Should create an object with specimen 1 and random DNA strand
 
@@ -59,4 +79,7 @@ console.log(pAequorFactory(1,['G', 'C', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'C
 
 console.log(pAequorStudyArr.length)// should return 30
 console.log(pAequorStudyArr.length)
+
+console.log(pAequorFactory(1,['A', 'T', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'C']).complementStrand())// complement strand function test
+
 */
