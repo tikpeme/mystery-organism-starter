@@ -53,6 +53,7 @@ while( pAequorStudyArr.length < 30){
 console.log(pAequorFactory(1,mockUpStrand()))// Should create an object with specimen 1 and random DNA strand
 
 console.log(pAequorFactory(1,['A', 'T', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'C']).willLikelySurvive())//Shoulld print false
+console.log(pAequorFactory(1,['A', 'T', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'T']).willLikelySurvive())//Shoulld print false
 console.log(pAequorFactory(1,['G', 'C', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'C']).willLikelySurvive())//Shoulld print True
 console.log(pAequorFactory(1,['G', 'C', 'C', 'G','A', 'T', 'C', 'G','A', 'T', 'C', 'G','A', 'C', 'C']).willLikelySurvive())//Shoulld print True
 
